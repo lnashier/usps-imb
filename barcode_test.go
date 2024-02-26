@@ -1,0 +1,38 @@
+package usps
+
+import (
+	"testing"
+)
+
+type testDef struct {
+	Track     string
+	Route     string
+	ExpectBar string
+	ExpectRC  int
+}
+
+var tests = []testDef{
+	{"53379777234994544928", "51135759461", "DAFDTDAFFDFTDADTDDFTTFDTATATFFFDFTTFFFTFDDTDAAFATDFTFDFDTTTDTTFDA", StatusEncoderApiSuccess},
+	{"53055494689272602879", "13765583689", "AFDADAFTAFDTDFTFTFDAAFDDTAFDFDTTFADATAATAAAADDDFAAAAATDADAFADFTTT", StatusEncoderApiSuccess},
+	{"40120111574675115924", "62176609110", "DDAFFFDAFTFDFFAAATTTDDFFTFADDFAFTTDAAAAAADFTTFDTAFDDTDDADATDAFAFF", StatusEncoderApiSuccess},
+	{"82205455868913559972", "54765515722", "TTTADTFFADAFDTTFDTAADATFFFADFFTDDFFFATDADAATAAADDATFTAADFADTADADD", StatusEncoderApiSuccess},
+	{"57379777234994544928", "51135759461", "", StatusEncoderApiTrackStringHasInvalidDigit},
+	{"53055494689272602879", "137655B3689", "", StatusEncoderApiRouteStringHasInvalidData},
+	{"4012X111574675115924", "62176609110", "", StatusEncoderApiTrackStringHasInvalidData},
+	{"01234567094987654321", "           ", "ATTFATTDTTADTAATTDTDTATTDAFDDFADFDFTFFFFFTATFAAAATDFFTDAADFTFDTDT", StatusEncoderApiSuccess},
+	{"01234567094987654321", "01234      ", "DTTAFADDTTFTDTFTFDTDDADADAFADFATDDFTAAAFDTTADFAAATDFDTDFADDDTDFFT", StatusEncoderApiSuccess},
+	{"01234567094987654321", "012345678  ", "ADFTTAFDTTTTFATTADTAAATFTFTATDAAAFDDADATATDTDTTDFDTDATADADTDFFTFA", StatusEncoderApiSuccess},
+	{"01234567094987654321", "01234567891", "AADTFFDFTDADTAADAATFDTDDAAADDTDTTDAFADADDDTFFFDDTTTADFAAADFTDAADA", StatusEncoderApiSuccess},
+}
+
+func TestIMb(t *testing.T) {
+	for _, theTest := range tests {
+		barStr, retCode := IMb(theTest.Track, theTest.Route)
+		if retCode != theTest.ExpectRC {
+			t.Errorf("Expected Status Code: %d, Got Status Code: %d", theTest.ExpectRC, retCode)
+		}
+		if barStr != theTest.ExpectBar {
+			t.Errorf("Expected Barcode: %s, Got Barcode: %s", theTest.ExpectBar, barStr)
+		}
+	}
+}
