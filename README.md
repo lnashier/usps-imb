@@ -25,7 +25,8 @@ The Intelligent Mail barcode consists of the following components:
     - Defines the mailpiece as Full-Service, Basic, or Non-Automation.
     - Determines the disposition of Undeliverable-As-Addressed (UAA) mail.
 
-3. **Mailer ID (MID)**: A USPS-assigned 6 or 9-digit field used to identify the mail owner or preparer.
+3. **Mailer ID (MID)**: A unique identifier assigned by USPS to Mail Owners or Preparer, Mailing Agents, or service providers based on annual mail volume criteria.
+    - 9-digit or 6-digit numeric code.
 
 4. **Serial Number**: A 6 or 9-digit field defined by the mailer.
 
@@ -41,26 +42,14 @@ The Intelligent Mail barcode consists of the following components:
 | Routing Code  | Delivery Point ZIP Code | 0, 5, 9, or 11            |
 | Total         |                         | 31 maximum                |
 
-## Mailer ID (MID) and Customer Registration ID (CRID)
-
-- **MID (Mailer ID)**: A unique identifier assigned by USPS to Mail Owners, Mailing Agents, or service providers based on annual mail volume criteria.
-    - 9-digit or 6-digit numeric code.
-
-- **CRID (Customer Registration ID)**: A unique number identifying a specific business location involved in a mailing.
-    - Required for electronic documentation submission (eDoc) and Full-Service benefits.
-
-## STID (Service Type Identifiers)
-
-STIDs define the mailpiece as Full-Service or Basic (non-automation) and determine the handling of UAA mail.
-
 ## Additional Resources
 
-- [USPS 4-State Customer Code](https://barcodeguide.seagullscientific.com/Content/Symbologies/USPS_4-State_Customer_Code.htm)
-- [USPS PostalPro - Intelligent Mail Barcode](https://postalpro.usps.com/onecodesolution)
 - [USPS PostalPro - Intelligent Mail Barcode FAQ](https://postalpro.usps.com/node/217)
 - [USPS PostalPro - Encoder/Decoder](https://postalpro.usps.com/ppro-tools/encoder-decoder)
 - [USPS PostalPro - Mailer ID](https://postalpro.usps.com/mailing/mailer-id)
+- [USPS PostalPro - Fonts and Encoders Download](https://postalpro.usps.com/onecodesolution)
 - [USPS PostalPro - Service Type Identifiers (STID)](https://postalpro.usps.com/service-type-identifiers/stidtable)
+- [USPS 4-State Customer Code Guide](https://barcodeguide.seagullscientific.com/Content/Symbologies/USPS_4-State_Customer_Code.htm)
 
 ## License
 
