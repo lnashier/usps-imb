@@ -44,12 +44,14 @@ The Intelligent Mail barcode consists of the following components:
 
 ## Additional Resources
 
+- [USPS PostalPro - Intelligent Mail Barcode](https://postalpro.usps.com/mailing/intelligent-mail-barcode)
+- [USPS PostalPro - Mailer ID](https://postalpro.usps.com/mailing/mailer-id)
+- [USPS PostalPro - Service Type Identifier (STID)](https://postalpro.usps.com/mailing/service-type-identifiers)
+- [USPS PostalPro - Service Type Identifier (STID) Table](https://postalpro.usps.com/service-type-identifiers/stidtable)
+- [USPS PostalPro - Service Type Identifier (STID) Details](https://postalpro.usps.com/node/461)
 - [USPS PostalPro - Intelligent Mail Barcode FAQ](https://postalpro.usps.com/node/217)
 - [USPS PostalPro - Encoder/Decoder](https://postalpro.usps.com/ppro-tools/encoder-decoder)
-- [USPS PostalPro - Mailer ID](https://postalpro.usps.com/mailing/mailer-id)
 - [USPS PostalPro - Fonts and Encoders Download](https://postalpro.usps.com/onecodesolution)
-- [USPS PostalPro - Service Type Identifiers (STID)](https://postalpro.usps.com/service-type-identifiers/stidtable)
-- [USPS 4-State Customer Code Guide](https://barcodeguide.seagullscientific.com/Content/Symbologies/USPS_4-State_Customer_Code.htm)
 
 ## License
 
