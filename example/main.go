@@ -13,7 +13,7 @@ func main() {
 
 	barcode, statusCode := usps.IMb(track, route)
 
-	if statusCode != usps.StatusEncoderApiSuccess {
+	if statusCode != usps.StatusEncoderAPISuccess {
 		fmt.Printf("Error generating barcode: %d, %s\n", statusCode, usps.StatusText(statusCode))
 		return
 	}

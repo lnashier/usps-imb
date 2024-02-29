@@ -4,6 +4,7 @@ package usps
 // #include "lib/usps4cb.h"
 import "C"
 import (
+	// Import C libs
 	_ "github.com/lnashier/usps-imb/lib"
 	"unsafe"
 )
