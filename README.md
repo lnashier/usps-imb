@@ -1,6 +1,7 @@
 # USPS Intelligent Mail (USPS 4-State Customer Code)
 
-[![Go Report Card](https://goreportcard.com/badge/github.com/lnashier/usps-imb)](https://goreportcard.com/badge/github.com/lnashier/usps-imb)
+[![GoDoc](https://pkg.go.dev/badge/github.com/lnashier/usps-imb)](https://pkg.go.dev/github.com/lnashier/usps-imb)
+[![Go Report Card](https://goreportcard.com/badge/github.com/lnashier/usps-imb)](https://goreportcard.com/report/github.com/lnashier/usps-imb)
 
 This module provides a function named `func IMb(track, route string) (string, int)` for generating USPS Intelligent Mail barcode (IMb), also known as 4-State Customer Barcode. The Intelligent Mail barcode is used by the United States Postal Service (USPS) for sorting and tracking letters and flats, offering enhanced visibility into the mailstream.
 
